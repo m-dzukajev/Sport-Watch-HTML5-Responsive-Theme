@@ -1,1 +1,1 @@
-sport-watch
+Sport-Watch-HTML5-Responsive-Theme
