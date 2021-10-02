@@ -11,6 +11,10 @@
             width: 220px;
         }
     }
+    .consultation{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
 }
 
 
@@ -35,10 +39,30 @@
         font-weight: 600;
         width: 110px;
         &_main{
-            width: 240px;
-            font-size: 12px;
+            width: 280px;
+            font-size: 15px;
+            font-weight: 500;
+        }
+        &_submit{
+            width: 100%;
+            font-size: 16px;
+            font-weight: 500;
         }
     }
+    .title{
+        &_left{
+            font-size: 30px;
+            line-height: 36px;
+        }
+    }
+    .consultation{
+        padding-left: 20px;
+        padding-right: 20px;
+        &__descr{
+            padding-top: 50px;
+        }
+    }
+    
 }
 
 @media (max-width: 575px){
@@ -55,6 +79,26 @@
         }
         &__phone{
             font-size: 14px;
+        }
+    }
+    .button{
+        font-size: 9px;
+        font-weight: 500;
+        width: 100px;
+        &_main{
+            width: 260px;
+            font-size: 14px;
+        }
+        &_submit{
+            width: 100%;
+            font-size: 14px;
+        }
+    }
+    .title{
+        font-size: 25px;
+        &_left{
+            font-size: 25px;
+            text-align: center;
         }
     }
     .promo{
@@ -76,18 +120,6 @@
             margin-top: 10px;
         }
     }
-    .button{
-        font-size: 9px;
-        font-weight: 500;
-        width: 100px;
-        &_main{
-            width: 200px;
-            font-size: 11px;
-        }
-    }
-    .title{
-        font-size: 25px;
-    }
     .advantages{
         &__wrapper{
             flex-direction: column;
@@ -103,5 +135,17 @@
         &__descr{
             padding-top: 18px;
         }
+    }
+    .consultation{
+        padding-left: 20px;
+        padding-right: 20px;
+        &__descr{
+            padding-top: 50px;
+            font-size: 18px;
+            text-align: center;
+        }
+    }
+    .feed-form{
+        width: 100%;
     }
 }
