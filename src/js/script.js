@@ -47,4 +47,55 @@ $(document).ready(function(){
             $('.overlay, #order').fadeIn('slow');
         })
     });
-  });
+    
+    //Валидация формы
+    function valideForms(form){
+        $(form).validate({
+            rules: {
+                name: {
+                    required: true,
+                    minlength: 2,
+            },
+                phone: "required",
+                email: {
+                    required: true,
+                    email: true
+                }
+            },
+            messages: {
+                name: {
+                    required: "Пожалуйста, введите своё имя",
+                    minlength: jQuery.validator.format("Введите {0} символов!")
+                },
+                phone: "Пожалуйста, введите свой телефон",
+                email: {
+                  required: "Пожалуйста, введите свою почту",
+                  email: "Неправильно введен адрес почты: name@domain.com"
+                }
+            }
+        });
+    };
+
+    valideForms('#consultation-form');
+    valideForms('#order form');
+    valideForms('#consultation form');
+
+    //Маска ввода телефона
+    $("input[name=phone]").mask("+7 (999) 999-99-99");
+
+
+    //mailer
+    $('form').submit(function(e){
+        e.preventDefault();
+        $.ajax({
+            type: "POST",
+            url: "mailer/smart.php",
+            data: $(this).serialize()
+        }).done(function(){
+            $(this).find("input").val("");
+
+            $('form').trigger('reset');
+        });
+        return false;
+    });
+});
