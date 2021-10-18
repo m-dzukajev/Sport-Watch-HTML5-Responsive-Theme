@@ -120,6 +120,9 @@
         &__official{
             display: none;
         }
+        &__contacts{
+            align-items: center;
+        }
         &__phone{
             font-size: 14px;
         }
@@ -128,6 +131,7 @@
         font-size: 9px;
         font-weight: 500;
         width: 100px;
+        line-height: 10px;
         &_main{
             width: 260px;
             font-size: 14px;
@@ -135,6 +139,9 @@
         &_submit{
             width: 100%;
             font-size: 14px;
+        }
+        &_mini{
+            font-size: 12px;
         }
     }
     .title{
@@ -217,6 +224,40 @@
             margin-top: 35px;
             margin-left: 30px;
             padding-right: 30px;
+        }
+    }
+    .footer{
+        &__info{
+            width: 100%;
+        }
+        &__addr{
+            font-size: 18px;
+        }
+        &__phone{
+            font-size: 18px;
+            line-height: 18px;
+        }
+        &__social{
+            &-item{
+                width: 35px;
+                height: 35px;
+                img{
+                    height: 19px;
+                }
+            }
+        }
+    }
+    .modal{
+        width: 310px;
+        &__subtitle{
+            font-size: 16px;
+        }
+        &__descr{
+            font-size: 12px;
+        }
+        &__close{
+            top: 10px;
+            right: 0px;
         }
     }
 }
